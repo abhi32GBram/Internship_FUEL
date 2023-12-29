@@ -1,0 +1,22 @@
+`PartTmeEmployee.java`
+
+package com.modifiers.example;
+
+public class PartTimeEmployee extends Employee {
+    private int hoursWorked;
+
+    public PartTimeEmployee(int id, String name, double salary, String city, String designation, int hoursWorked) {
+        super(id, name, salary, city, designation);
+        this.hoursWorked = hoursWorked;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("ID: " + getId());
+        System.out.println("Name: " + getName());
+        System.out.println("Salary: " + getSalary());
+        System.out.println("City: " + getCity());
+        System.out.println("Designation: " + getDesignation());
+        System.out.println("Hours Worked: " + hoursWorked);
+    }
+}

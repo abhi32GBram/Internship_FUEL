@@ -1,0 +1,104 @@
+package com.modifiers.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        try {
+            System.out.println("~~ ENTER DETAILS OF FULL TIME EMPLOYEES ~~ ");
+
+            System.out.print("ID: ");
+            int fId = scanner.nextInt();
+
+            System.out.print("Name: ");
+            String fName = scanner.next();
+
+            System.out.print("City: ");
+            String fCity = scanner.next();
+
+            System.out.print("Designation: ");
+            String fDesignation = scanner.next();
+
+            System.out.print("Annual Salary: ");
+            double fSalary = scanner.nextDouble();
+
+            System.out.print("Years of Service: ");
+            int fYearsOfService = scanner.nextInt();
+
+            // Check for ArithmeticException
+            if (fSalary < 0 || fYearsOfService < 0) {
+                throw new ArithmeticException("Salary and Years of service cannot be negative.");
+            }
+
+            FullTimeEmployee ftEmployee = new FullTimeEmployee(fId, fName, fSalary, fCity, fDesignation, fYearsOfService);
+
+            System.out.println("\n------------------------------------------------------------------\n");
+
+            System.out.println("ENTER DETAILS OF PART TIME EMPLOYEES :");
+
+            System.out.print("ID: ");
+            int pId = scanner.nextInt();
+
+            System.out.print("Name: ");
+            String pName = scanner.next();
+
+            System.out.print("City: ");
+            String pCity = scanner.next();
+
+            System.out.print("Designation: ");
+            String pDesignation = scanner.next();
+
+            System.out.print("Hourly Rate: ");
+            double pRate = scanner.nextDouble();
+
+            System.out.print("Hours Per Week: ");
+            int pHours = scanner.nextInt();
+
+            // Check for ArithmeticException
+            if (pRate < 0 || pHours < 0) {
+                throw new ArithmeticException("Hourly rate and hours per week cannot be negative.");
+            }
+
+            PartTimeEmployee ptEmployee = new PartTimeEmployee(pId, pName, pRate, pCity, pDesignation, pHours);
+
+            while (true) {
+                System.out.println("\n------------------------------------------------------------------\n");
+                System.out.println("TYPE OF EMPLOYEE DETAILS YOU WANT TO SEE : \n(1) for FULL TIME \n(2) for PART TIME , \n(3) for BOTH, \n(4) to EXIT)");
+                System.out.println("------------------------------------------------------------------");
+                int choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        System.out.println(" ~~DETAILS OF FULL TIME EMPLOYEE~~");
+                        ftEmployee.displayInfo();
+                        break;
+                    case 2:
+                        System.out.println("~~DETAILS OF PART TIME EMPLOYEE~~");
+                        ptEmployee.displayInfo();
+                        break;
+                    case 3:
+                        System.out.println("~~DETAILS OF BOTH THE EMPLOYEES~~");
+                        ftEmployee.displayInfo();
+                        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        ptEmployee.displayInfo();
+                        break;
+                    case 4:
+                        System.out.println("Bye :) ");
+                        System.out.println("Exiting...");
+                        scanner.close();
+                        return;
+                    default:
+                        System.out.println("Invalid choice !!!");
+                }
+            }
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (NullPointerException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
+    }
+}

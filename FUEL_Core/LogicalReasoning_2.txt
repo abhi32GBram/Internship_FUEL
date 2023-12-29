@@ -1,0 +1,8 @@
+<aside>
+💡  A  building has a lobby and it has a bulb and fan and dummy appliance  and we're on the G floor we cant go to the lobby upstairs
+
+The ground floor has fan, tube light, dummy appliance  switches  
+
+How can we guess using only 1 shot which switch is for the tube if the switches are on the ground floor and we cant go upstairs
+
+</aside>

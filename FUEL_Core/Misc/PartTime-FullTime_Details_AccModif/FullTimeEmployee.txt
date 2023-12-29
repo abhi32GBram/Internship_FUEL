@@ -1,0 +1,22 @@
+`FullTimeEmployee.java`
+
+package com.modifiers.example;
+
+public class FullTimeEmployee extends Employee {
+    private int yearsOfService;
+
+    public FullTimeEmployee(int id, String name, double salary, String city, String designation, int yearsOfService) {
+        super(id, name, salary, city, designation);
+        this.yearsOfService = yearsOfService;
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("ID: " + getId());
+        System.out.println("Name: " + getName());
+        System.out.println("Salary: " + getSalary());
+        System.out.println("City: " + getCity());
+        System.out.println("Designation: " + getDesignation());
+        System.out.println("Years of Service: " + yearsOfService);
+    }
+}

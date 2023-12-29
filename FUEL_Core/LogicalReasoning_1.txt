@@ -1,0 +1,17 @@
+We have 2 jars of capacity - 5ltr and 3 ltr jars and a tap is running . 
+If we want to fill the 5ltr jar with exact 4ltr of water how will we do so .
+
+We don't have any measurement to exactly fill the jar to the required amount - then how will we do so
+
+Solution :
+
+1. Fill the 3-liter jar completely.
+2. Pour water from the 3-liter jar into the 5-liter jar until the 3-liter jar is empty. This will leave you with 2 liters of water in the 5-liter jar.
+3. Fill the 3-liter jar again.
+4. Pour water from the 3-liter jar into the 5-liter jar until the 3-liter jar is empty. This will leave you with 1 liter of water in the 5-liter jar.
+5. Fill the 3-liter jar again.
+6. Pour water from the 3-liter jar into the 5-liter jar until the 3-liter jar is empty. This will leave you with 2 liters of water in the 5-liter jar.
+7. Fill the 3-liter jar again.
+8. Pour water from the 3-liter jar into the 5-liter jar until the 3-liter jar is empty. This will leave you with 3 liters of water in the 5-liter jar.
+9. Fill the 3-liter jar again.
+10. Pour water from the 3-liter jar into the 5-liter jar until the 3-liter jar is empty. This will leave you with 4 liters of water in the 5-liter jar.

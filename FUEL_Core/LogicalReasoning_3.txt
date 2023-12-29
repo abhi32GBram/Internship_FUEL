@@ -1,0 +1,1 @@
+4 people A B C D  1 2 5 10    minutes to cross the river  … only 2 people can cross at a time … what’s their min time if they go in pairs 
